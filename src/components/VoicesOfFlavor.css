@@ -1,0 +1,239 @@
+.voices-section {
+  background-color: #f1fbf9;
+  padding: 6rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  overflow: hidden;
+}
+
+.voices-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.voices-header h4 {
+  color: #f26a2e;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 0.75rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+  animation: aboutSlideIn 1.2s ease-out forwards;
+  transition: all 0.4s ease;
+}
+
+.voices-header h4:hover {
+  color: #ff8f55;
+  text-shadow: 0 0 25px rgba(242, 106, 46, 0.6);
+  transform: scale(1.05);
+}
+
+.voices-header h2 {
+  color: #004c3f;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  line-height: 1.2;
+  position: relative;
+  animation: flavorPop 1.4s ease-out forwards;
+  transition: all 0.4s ease;
+}
+
+.voices-header h2:hover {
+  color: #00785f;
+  text-shadow: 0 0 30px rgba(0, 76, 63, 0.4);
+  transform: scale(1.05);
+}
+
+.voices-header h2::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #f26a2e, #004c3f);
+  border-radius: 10px;
+  animation: underlineGrow 1.6s ease-out forwards 1.2s;
+}
+
+.voices-content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+.voices-image img {
+  width: 550px;
+  height: 720px;
+  object-fit: cover;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 76, 63, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.voices-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(242, 106, 46, 0.4);
+}
+
+.voices-content {
+  max-width: 600px;
+  position: relative;
+  font-family: "Inter", sans-serif;
+  background-color: #ffffff;
+  padding: 2rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: default;
+  animation: fadeInRight 1.2s ease-out;
+}
+
+.voices-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(242, 106, 46, 0.25);
+}
+
+.voices-content::before {
+  content: "❝";
+  position: absolute;
+  top: -30px;
+  left: -15px;
+  font-size: 4rem;
+  color: #f26a2e;
+  font-family: "Playfair Display", serif;
+}
+
+.quote {
+  color: #1a3b32;
+  line-height: 1.8;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+  opacity: 0.95;
+  transition: all 0.4s ease;
+}
+
+.quote:hover {
+  transform: scale(1.03);
+  color: #f26a2e;
+  text-shadow: 0 0 20px rgba(242, 106, 46, 0.4);
+}
+
+.name {
+  font-weight: 700;
+  color: #004c3f;
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-family: "Playfair Display", serif;
+  transition: all 0.4s ease;
+}
+
+.name:hover {
+  transform: scale(1.05);
+  color: #f26a2e;
+  text-shadow: 0 0 20px rgba(242, 106, 46, 0.4);
+}
+
+.location {
+  color: #666;
+  font-size: 1.3rem;
+  transition: all 0.4s ease;
+}
+
+.location:hover {
+  transform: scale(1.03);
+  color: #004c3f;
+  text-shadow: 0 0 15px rgba(0, 76, 63, 0.4);
+}
+
+@keyframes aboutSlideIn {
+  0% {
+    opacity: 0;
+    letter-spacing: 10px;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    letter-spacing: 2px;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flavorPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes underlineGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 180px;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .voices-content-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .voices-image img {
+    width: 350px;
+    height: 450px;
+  }
+
+  .voices-content {
+    padding: 1.5rem;
+  }
+
+  .voices-content::before {
+    left: 45%;
+    top: -20px;
+  }
+
+  .quote {
+    font-size: 1.6rem;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .voices-header h2::after {
+    width: 120px;
+  }
+}

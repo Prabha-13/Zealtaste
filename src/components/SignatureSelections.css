@@ -1,0 +1,99 @@
+.signature-section {
+  background-color: #ffffff;
+  padding: 5rem 0;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+}
+
+.signature-heading {
+  color: #f17407;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.signature-title {
+  color: #2e6b60;
+  font-size: 2.5rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  margin-bottom: 4rem;
+}
+
+.signature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  justify-items: center;
+}
+
+@media (min-width: 640px) {
+  .signature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.signature-card {
+  background-color: #faefe6;
+  padding: 2rem 3.5rem; 
+  border-radius: 1.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 35rem; 
+  text-align: center;
+}
+
+.signature-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.signature-image {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 4px solid #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+.signature-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signature-name {
+  color: #2e6b60;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.signature-desc {
+  color: #4b5563;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  max-width: 26rem; 
+  margin: 0 auto 1.5rem;
+}
+
+.signature-price {
+  display: inline-block;
+  background-color: #2e6b60;
+  color: #ffffff;
+  padding: 0.4rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.signature-card {
+  opacity: 0; 
+}

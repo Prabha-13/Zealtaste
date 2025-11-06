@@ -1,0 +1,101 @@
+.features-section {
+  background-color: #ffffff;
+  padding: 5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+
+/* Icon + Text */
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: #f1fbf9;
+  padding: 1.5rem 2.5rem;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(0, 76, 63, 0.15);
+  transition: all 0.4s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Gradient Hover Effect */
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #f26a2e, #004c3f);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.feature-card:hover::before {
+  opacity: 0.1;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(242, 106, 46, 0.25);
+}
+
+.feature-icon {
+  background-color: #f26a2e;
+  color: white;
+  font-size: 1.8rem;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.5s ease, box-shadow 0.4s ease;
+  z-index: 1;
+}
+
+.feature-card:hover .feature-icon {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 0 0 25px rgba(242, 106, 46, 0.5);
+}
+
+.feature-card h3 {
+  color: #004c3f;
+  font-size: 1.7rem;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  line-height: 1.4;
+  margin: 0;
+  z-index: 1;
+}
+
+@media (max-width: 900px) {
+  .features-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .feature-card {
+    padding: 1.2rem 2rem;
+  }
+
+  .feature-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.4rem;
+  }
+}

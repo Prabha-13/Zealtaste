@@ -1,0 +1,55 @@
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeInLeft {
+  animation: fadeInLeft 1s ease forwards;
+}
+
+.animate-fadeInRight {
+  animation: fadeInRight 1s ease forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.custom-btn {
+  background: linear-gradient(to right, #ff7b54, #e76f51);
+  color: white;
+  padding: 1rem 3rem; 
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  box-shadow: 0 0 25px #e76f51aa;
+  transition: all 0.3s ease-in-out;
+  width: fit-content;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.custom-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #ff9966, #cf5c3e);
+  box-shadow: 0 0 30px #e76f51cc;
+}
+
